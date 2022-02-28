@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>qdc</title>
+    <link rel="stylesheet" href="app.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div class="full-height" id="page1">
+      <h1>Orders</h1>
+      <div>
+        <div class="inline">
+          <button id="export" class="btn">Export</button>
+          <button id="filter" class="btn">Filter</button>
+        </div>
+        <div class="container">
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Order Date/Time</td>
+                <td>Order No.</td>
+                <td>Address</td>
+                <td>Phone</td>
+                <td>Due Date</td>
+                <td>Pcs.</td>
+                <td>Weight</td>
+                <td>Gross Amount</td>
+                <td>Disconnect</td>
+                <td>Net Ammount</td>
+                <td>Paid</td>
+                <td>Balance</td>
+              </tr>
+            </thead>
+            <tbody id="table_body"></tbody>
+          </table>
+        </div>
+        <button id="add">add</button>
+      </div>
+    </div>
+
+    <div id="toggle">
+      <div class="form_bar">
+        <div class="header">
+          <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+          <h2>Filter</h2>
+        </div>
+        <div class="form">
+          <form>
+            <label for="lang" class="label">Order</label>
+            <select name="languages" id="lang" class="drop">
+              <option value="javascript">JavaScript</option>
+              <option value="php">PHP</option>
+              <option value="java">Java</option>
+              <option value="golang">Golang</option>
+              <option value="python">Python</option>
+              <option value="c#">C#</option>
+              <option value="C++">C++</option>
+              <option value="erlang">Erlang</option>
+            </select>
+          </form>
+
+          <form>
+            <label for="customer_name" class="label">Customer</label>
+            <div style="width: 95%; margin: auto">
+              <div id="customer" class="search_div">
+                <input
+                  class="search"
+                  id="customer_name"
+                  placeholder="Search by customer..."
+                />
+              </div>
+            </div>
+          </form>
+          <form>
+            <label for="lang" class="label">Discount</label>
+            <select name="languages" id="lang" class="drop">
+              <option value="javascript">Select</option>
+              <option value="php">At order creation</option>
+              <option value="java">At pickup</option>
+            </select>
+          </form>
+          <form>
+            <label for="lang" class="label">Home delivery</label>
+            <select name="languages" id="lang" class="drop">
+              <option value="javascript">JavaScript</option>
+              <option value="php">PHP</option>
+              <option value="java">Java</option>
+              <option value="golang">Golang</option>
+              <option value="python">Python</option>
+              <option value="c#">C#</option>
+              <option value="C++">C++</option>
+              <option value="erlang">Erlang</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-height {
+  height: 100%;
+  width: 100%;
+  background: rgb(236, 236, 235);
+}
+.container{
+  width:90%;
+  top: 40px;
+  height:800px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  text-align:center;
+  margin-top:0px;
+  overflow:auto;
+}
+.table{
+  width:100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top:0;
+  border-collapse:collapse;
+  
+}
+thead{
+  background:rgb(144, 238, 238);
+  border-bottom:1px solid black;
+  font:bolder;
+  position:sticky;
+  top:0;
+}
+tr{
+  height:60px;
+  font-size:25px;
+}
+td{
+  border-width:0;
+  padding:0;
+}
+
+.header{
+  height:100px;
+}
+#page1 {
+  position: absolute;
+}
+.btn{
+  float:right;
+  height:50px;
+  width:110px;
+  border-color:black;
+  background:white;
+  margin:10px;
+  border-radius:7px;
+  font-size:large;
+}
+
+h1,
+h2 {
+  background: white;
+  font-size: 40px;
+  padding-left: 80px;
+  margin-top:0;
+  height:80px;
+  padding-top:30px;
+}
+.inline {
+  float:right;
+  margin-right:12px;
+}
+
+#toggle {
+  height: 100%;
+  width: 100%;
+  background: rgba(14, 14, 14, 0.6);
+  position: fixed;
+  z-index: 1000;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+.search_div{
+  font-size:0;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.search{
+  width: 98%;
+  height: 40px;
+  margin: 0 !important;
+  border: 1px solid black !important;
+  outline: none;
+  border-radius: 7px;
+  background: white;
+  display:inline-block;
+  padding-left: 10px;
+}
+
+.icon{
+  height:45px;
+  width:calc(16% - 10px);
+  margin: 0 !important;
+  background:rgb(109, 177, 233);
+  border-bottom-right-radius:10px;
+  border-top-right-radius:10px;
+  border: none;
+}
+.icon:hover{
+  background:rgb(137, 194, 240);
+}
+.drop {
+  width: 95%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 7px;
+  background: white;
+}
+.label {
+  padding: 15px;
+  font-size: 25px;
+  margin-top:10px;
+}
+
+.form_bar {
+  position: absolute;
+  right: -30%;
+  top: 0;
+  bottom: 0;
+  background: white;
+  width: 30%;
+}
+
+.form{
+  margin-top:20px;
+}
+
+.cross {
+  float: right;
+  height: 40px;
+  width: 40px;
+  display: block;
+  content: ' ';
+  background:white;
+  border:none;
+
+}
+
+.cross:hover{
+  cursor:pointer;
+  background:rgb(218, 217, 217);
+}
+
+.ui-front{
+  z-index:10000 !important;
+}
+
+.ui-widget-content{
+  background:rgb(235, 233, 233) !important;
+}
+
