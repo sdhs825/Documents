@@ -9,11 +9,6 @@ $(document).ready(function () {
       $("#toggle").toggle(0, "linear");
     });
   });
-  $("#toggle").click(function () {
-    $(".form_bar").animate({ right: "-30%" }, 200, "linear", () => {
-      $("#toggle").toggle(0, "linear");
-    });
-  });
 
   $("#add").click(() => {
     var html =
@@ -29,5 +24,4 @@ $(document).ready(function () {
   $("#customer_name").autocomplete({ source: names }, () => {
     console.log("working");
   });
-  
 });
