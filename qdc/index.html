@@ -27,8 +27,10 @@
           <table class="table">
             <thead>
               <tr>
+                <td>Serial No.</td>
                 <td>Order Date/Time</td>
                 <td>Order No.</td>
+                <td>Name</td>
                 <td>Address</td>
                 <td>Phone</td>
                 <td>Due Date</td>
@@ -55,53 +57,78 @@
           <h2>Filter</h2>
         </div>
         <div class="form">
-          <form>
-            <label for="lang" class="label">Order</label>
-            <select name="languages" id="lang" class="drop">
-              <option value="javascript">JavaScript</option>
-              <option value="php">PHP</option>
-              <option value="java">Java</option>
-              <option value="golang">Golang</option>
-              <option value="python">Python</option>
-              <option value="c#">C#</option>
-              <option value="C++">C++</option>
-              <option value="erlang">Erlang</option>
-            </select>
-          </form>
+          <div>
+            <label for="order" class="label">Order</label>
+            <div style="width: 95%; margin: auto">
+              <div id="Order" class="search_div">
+                <input
+                  class="drop"
+                  id="order"
+                  placeholder="Search by Order..."
+                />
+              </div>
+            </div>
+          </div>
 
-          <form>
+          <div>
             <label for="customer_name" class="label">Customer</label>
             <div style="width: 95%; margin: auto">
               <div id="customer" class="search_div">
                 <input
-                  class="search"
+                  class="drop"
                   id="customer_name"
                   placeholder="Search by customer..."
                 />
               </div>
             </div>
-          </form>
-          <form>
-            <label for="lang" class="label">Discount</label>
-            <select name="languages" id="lang" class="drop">
-              <option value="javascript">Select</option>
-              <option value="php">At order creation</option>
-              <option value="java">At pickup</option>
+          </div>
+
+          <div>
+            <label for="user" class="label">User</label>
+            <div style="width: 95%; margin: auto">
+              <div id="User" class="search_div">
+                <input class="drop" id="user" placeholder="Search by User..." />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label for="discount" class="label">Discount</label>
+            <select id="Discount" class="drop">
+              <option value="none">Select</option>
+              <option value="creation">At order creation</option>
+              <option value="pickup">At Pickup</option>
             </select>
-          </form>
-          <form>
-            <label for="lang" class="label">Home delivery</label>
-            <select name="languages" id="lang" class="drop">
-              <option value="javascript">JavaScript</option>
-              <option value="php">PHP</option>
-              <option value="java">Java</option>
-              <option value="golang">Golang</option>
-              <option value="python">Python</option>
-              <option value="c#">C#</option>
-              <option value="C++">C++</option>
-              <option value="erlang">Erlang</option>
+          </div>
+
+          <div>
+            <label for="filter_by" class="label">Filter By</label>
+            <select id="fiter_by" class="drop">
+              <option value="none">Select</option>
+              <option value="Home">Home Delivery</option>
+              <option value="Urgent">Urgent</option>
+              <option value="Pending">Pending Amount</option>
+              <option value="POS">Mobile POS</option>
+              <option value="Package">Package</option>
             </select>
-          </form>
+          </div>
+        </div>
+
+        <div id="button">
+          <button
+            id="Clear"
+            class="btn"
+            style="background-color: rgb(241, 44, 54); color: white"
+          >
+            Clear
+          </button>
+          <button
+            id="Apply"
+            class="btn"
+            style="background-color: rgb(42, 112, 243); color: white"
+          >
+            Apply
+          </button>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ body {
   background: rgb(236, 236, 235);
 }
 .container{
-  width:90%;
+  width: 98%;
   top: 40px;
   height:800px;
   position: relative;
@@ -28,10 +28,11 @@ body {
   transform: translateX(-50%);
   margin-top:0;
   border-collapse:collapse;
+  border-bottom:1px solid black;
   
 }
 thead{
-  background:rgb(144, 238, 238);
+  background:white;
   border-bottom:1px solid black;
   font:bolder;
   position:sticky;
@@ -55,12 +56,15 @@ td{
 .btn{
   float:right;
   height:50px;
-  width:110px;
+  width:120px;
   border-color:black;
   background:white;
   margin:10px;
-  border-radius:7px;
   font-size:large;
+  box-shadow:1px 2px 5px 2px rgb(202, 200, 200);
+}
+.btn:hover{
+  background:rgb(241, 240, 240);
 }
 
 h1,
@@ -74,7 +78,11 @@ h2 {
 }
 .inline {
   float:right;
-  margin-right:12px;
+  margin-right:18px;
+}
+
+#button{
+  height:80px;
 }
 
 #toggle {
@@ -121,7 +129,7 @@ h2 {
 }
 .drop {
   width: 95%;
-  height: 40px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,6 +137,8 @@ h2 {
   outline: none;
   border-radius: 7px;
   background: white;
+  font-size:20px;
+  padding-left:20px;
 }
 .label {
   padding: 15px;
@@ -141,8 +151,8 @@ h2 {
   right: -30%;
   top: 0;
   bottom: 0;
-  background: white;
-  width: 30%;
+  background: rgb(243, 243, 243);
+  width: 17%;
 }
 
 .form{
@@ -151,8 +161,8 @@ h2 {
 
 .cross {
   float: right;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   display: block;
   content: ' ';
   background:white;
@@ -171,5 +181,22 @@ h2 {
 
 .ui-widget-content{
   background:rgb(235, 233, 233) !important;
+}
+
+.ui-widget{
+  font-size:21px !important;
+}
+.ui-menu-item{
+  padding:5px !important;
+}
+
+.ui-menu-item:hover{
+  background:white !important;
+  border:none !important;
+}
+
+.ui-autocomplete{
+  position:fixed !important;
+  cursor:pointer !important;
 }
 
