@@ -86,18 +86,29 @@ $(document).ready(function () {
   $("#toggle").hide();
   $("#filter").click(function () {
     $("#toggle").toggle(0, "linear");
-    $(".form_bar").animate({ right: 0 }, 200, "linear");
+    $(".form_bar").animate({ right: 0 }, 350, "linear");
   });
   $(".cross").click(function () {
-    $(".form_bar").animate({ right: "-30%" }, 200, "linear", () => {
+    $(".form_bar").animate({ right: "-30%" }, 350, "linear", () => {
+      $("#toggle").toggle(0, "linear");
+    });
+  });
+
+  $(".form_bar").click(function (e) {
+    e.stopPropagation();
+  });
+
+  $("#toggle").click(function () {
+    $(".form_bar").animate({ right: "-30%" }, 350, "linear", () => {
       $("#toggle").toggle(0, "linear");
     });
   });
 
   $("#add").click(() => {
     var html = "<tr id=" + i + ">";
-    for (var j = 0; j < 14; j++) {
-      html += "<td>" + data[i][j] + "</td>";
+    html += "<td> <a href='#'>" + data[i][0] + "</a></td>";
+    for (var j = 1; j < 14; j++) {
+      html += "<td>" + data[i][j] + "</a></td>";
     }
     $("#table_body").append(html);
     i++;
@@ -115,5 +126,10 @@ $(document).ready(function () {
   $("#customer_name,#user").autocomplete({ source: names }, () => {
     console.log("working");
   });
-  
+});
+
+$("#Clear").on("click", () => {
+  $("#filter_by,#Discount").val("none");
+  $("#user,#customer_name,#order").val('');
+  console.log("clicked");
 });

@@ -17,11 +17,12 @@
   </head>
   <body>
     <div class="full-height" id="page1">
+      <button id="add">add</button>
       <h1>Orders</h1>
       <div>
         <div class="inline">
-          <button id="export" class="btn">Export</button>
-          <button id="filter" class="btn">Filter</button>
+          <button id="export" class="btn">EXPORT</button>
+          <button id="filter" class="btn">FILTER</button>
         </div>
         <div class="container">
           <table class="table">
@@ -46,14 +47,14 @@
             <tbody id="table_body"></tbody>
           </table>
         </div>
-        <button id="add">add</button>
       </div>
     </div>
+
 
     <div id="toggle">
       <div class="form_bar">
         <div class="header">
-          <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+          <button class="cross" style="font-size:25px;font-weight:200;">X</i></button>
           <h2>Filter</h2>
         </div>
         <div class="form">
@@ -62,9 +63,10 @@
             <div style="width: 95%; margin: auto">
               <div id="Order" class="search_div">
                 <input
-                  class="drop"
+                  class="search"
                   id="order"
                   placeholder="Search by Order..."
+                  type="search"
                 />
               </div>
             </div>
@@ -75,9 +77,10 @@
             <div style="width: 95%; margin: auto">
               <div id="customer" class="search_div">
                 <input
-                  class="drop"
+                  class="search"
                   id="customer_name"
                   placeholder="Search by customer..."
+                  type="search"
                 />
               </div>
             </div>
@@ -87,30 +90,39 @@
             <label for="user" class="label">User</label>
             <div style="width: 95%; margin: auto">
               <div id="User" class="search_div">
-                <input class="drop" id="user" placeholder="Search by User..." />
+                <input
+                  class="search"
+                  id="user"
+                  placeholder="Search by User..."
+                  type="search"
+                />
               </div>
             </div>
           </div>
 
           <div>
             <label for="discount" class="label">Discount</label>
-            <select id="Discount" class="drop">
-              <option value="none">Select</option>
-              <option value="creation">At order creation</option>
-              <option value="pickup">At Pickup</option>
-            </select>
+            <div style="width: 95%; margin: auto">
+              <select id="Discount" class="drop">
+                <option value="none">Select</option>
+                <option value="creation">At order creation</option>
+                <option value="pickup">At Pickup</option>
+              </select>
+            </div>
           </div>
 
           <div>
             <label for="filter_by" class="label">Filter By</label>
-            <select id="fiter_by" class="drop">
-              <option value="none">Select</option>
-              <option value="Home">Home Delivery</option>
-              <option value="Urgent">Urgent</option>
-              <option value="Pending">Pending Amount</option>
-              <option value="POS">Mobile POS</option>
-              <option value="Package">Package</option>
-            </select>
+            <div style="width: 95%; margin: auto">
+              <select id="filter_by" class="drop">
+                <option value="none" selected>Select</option>
+                <option value="Home">Home Delivery</option>
+                <option value="Urgent">Urgent</option>
+                <option value="Pending">Pending Amount</option>
+                <option value="POS">Mobile POS</option>
+                <option value="Package">Package</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -118,14 +130,14 @@
           <button
             id="Clear"
             class="btn"
-            style="background-color: rgb(241, 44, 54); color: white"
+            style="background-color: white; color: black"
           >
             Clear
           </button>
           <button
             id="Apply"
             class="btn"
-            style="background-color: rgb(42, 112, 243); color: white"
+            style="background-color: black; color: white"
           >
             Apply
           </button>
